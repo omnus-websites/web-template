@@ -5,6 +5,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    // TODO: Update colors
     colors: {
       primary: "#",
       secondary: "#",
