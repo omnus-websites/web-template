@@ -2,20 +2,24 @@ import { FC, ReactNode } from "react";
 import Link from "next/link";
 import classNames from "classnames";
 
+enum ButtonVariants {
+  PRIMARY = "primary",
+  SECONDARY = "secondary",
+  WHITE = "white",
+}
+
 type ButtonProps = {
-  primary: boolean;
-  secondary: boolean;
+  variant: "primary" | "secondary" | "white";
   href: string;
   className?: string;
-  onClick: () => void | undefined;
+  onClick?: () => void;
   children: ReactNode;
 };
 
-// TODO: Handle icons and ask what variants
+// TODO: Handle icons
 
 const Button: FC<ButtonProps> = ({
-  primary,
-  secondary,
+  variant = ButtonVariants.PRIMARY,
   href,
   className,
   onClick,
@@ -23,7 +27,12 @@ const Button: FC<ButtonProps> = ({
 }) => {
   const buttonClass = classNames(
     "p-4 font-base",
-    { "bg-primary text-white": primary, "bg-white text-black": secondary },
+    {
+      "bg-primary text-white": variant === ButtonVariants.PRIMARY,
+      "bg-transparent text-primary border-2 border-primary":
+        variant === ButtonVariants.SECONDARY,
+      "bg-white text-black": variant === ButtonVariants.WHITE,
+    },
     className
   );
 
