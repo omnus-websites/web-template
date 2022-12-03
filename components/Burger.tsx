@@ -1,18 +1,11 @@
 import classNames from "classnames";
 
-enum BurgerVariants {
-  PRIMARY = "primary",
-  SECONDARY = "secondary",
-}
-
 type BurgerProps = {
-  variant: BurgerVariants;
+  isPrimary: boolean;
   setOpen: (bool: boolean) => void;
 };
 
-const Burger = ({ variant, setOpen }: BurgerProps) => {
-  const isPrimary = variant === BurgerVariants.PRIMARY;
-
+const Burger = ({ isPrimary, setOpen }: BurgerProps) => {
   const sharedClasses = classNames("h-[2px]", {
     "bg-black": isPrimary,
     "bg-white": !isPrimary,

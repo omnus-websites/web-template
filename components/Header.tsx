@@ -43,11 +43,13 @@ const Header = ({ variant }: HeaderProps) => {
         }
       )}
     >
-      <Image
-        src={isPrimary ? logoPrimary : logoSecondary}
-        alt="company logo"
-        className="max-w-[168px] h-10"
-      />
+      <Link href="/">
+        <Image
+          src={isPrimary ? logoPrimary : logoSecondary}
+          alt="company logo"
+          className="max-w-[168px] h-10"
+        />
+      </Link>
       <nav className="hidden md:block">
         <ul className="flex items-center">
           {navConfig.map(({ label, href }) => (
@@ -67,7 +69,7 @@ const Header = ({ variant }: HeaderProps) => {
           </li>
         </ul>
       </nav>
-      <Burger setOpen={setOpen} />
+      <Burger setOpen={setOpen} isPrimary={isPrimary} />
     </header>
   );
 };
