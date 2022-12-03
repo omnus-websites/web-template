@@ -30,6 +30,58 @@
   .font-f1 {
     @apply text-f3 lg:text-f1 font-bold;
   }
+
+  .input-container:focus-within label {
+    transform: translate(16px, 6px) scale(0.8);
+  }
+
+  .input-container:focus-within input {
+    outline: none;
+    @apply border-2 border-primary;
+  }
+
+  .input-container .filled {
+    transform: translate(16px, 6px) scale(0.8);
+  }
+
+  input[type="radio"] {
+    display: grid;
+    place-content: center;
+    appearance: none;
+    background-color: #fff;
+    font: inherit;
+    color: currentColor;
+    width: 24px;
+    height: 24px;
+    transform: translateY(0);
+    @apply border-[0.15em] border-primary rounded-[50%];
+  }
+
+  input[type="radio"]::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    @apply shadow-[inset_1em_1em_theme(colors.primary)];
+  }
+
+  input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+
+  input[type="radio"]:focus {
+    outline: 2px solid theme(colors.primary);
+    outline-offset: 2px;
+  }
+
+  .radio {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 8px;
+    width: fit-content;
+  }
 }
 
 /* Box sizing rules */
@@ -115,4 +167,8 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+svg {
+  fill: black;
 }
