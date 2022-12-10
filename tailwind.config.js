@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     // TODO: Update colors
     colors: {
-      primary: "#",
+      primary: "#2762EC",
       secondary: "#",
       tertiary: "#",
       black: "#000000",
@@ -27,5 +27,4 @@ module.exports = {
       f1: ["56px", "62px"],
     },
   },
-  plugins: [],
 };

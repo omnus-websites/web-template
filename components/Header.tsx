@@ -6,6 +6,7 @@ import logoPrimary from "../assets/Logo@2x.png";
 import logoSecondary from "../assets/Logo@2x-1.png";
 import Burger from "./Burger";
 import { useState } from "react";
+import MobileMenu from "./MobileMenu";
 
 const navConfig = [
   {
@@ -70,6 +71,7 @@ const Header = ({ variant }: HeaderProps) => {
         </ul>
       </nav>
       <Burger setOpen={setOpen} isPrimary={isPrimary} />
+      <MobileMenu open={isOpen} setOpen={setOpen} />
     </header>
   );
 };

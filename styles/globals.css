@@ -24,7 +24,7 @@
   }
 
   .font-f2 {
-    @apply text-f3 xl:text-f2 font-bold;
+    @apply text-f3 lg:text-f2 font-bold;
   }
 
   .font-f1 {
