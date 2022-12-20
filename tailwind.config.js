@@ -16,6 +16,8 @@ module.exports = {
       grey2: "#828282",
       grey3: "#C4C4C4",
       grey4: "#F0F0F0",
+      error: "#FF3B30",
+      success: "#34C759",
     },
     fontSize: {
       sm: ["14px", "20px"],
