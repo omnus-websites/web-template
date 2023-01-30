@@ -4,6 +4,7 @@ import classNames from "classnames";
 import Icon from "./Icon";
 import { IconType } from "../svgs/icons.constants";
 
+// TODO: use terms from Figma
 export enum ButtonVariants {
   PRIMARY = "primary",
   SECONDARY = "secondary",

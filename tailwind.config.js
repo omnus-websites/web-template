@@ -10,6 +10,7 @@ module.exports = {
       primary: "#2762EC",
       secondary: "#",
       tertiary: "#",
+      pale_primary: "",
       black: "#000000",
       white: "#FFFFFF",
       grey1: "#555555",
@@ -19,6 +20,7 @@ module.exports = {
       error: "#FF3B30",
       success: "#34C759",
     },
+    // TODO: change line height to percent
     fontSize: {
       sm: ["14px", "20px"],
       base: ["16px", "22px"],
