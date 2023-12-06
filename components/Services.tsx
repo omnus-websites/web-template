@@ -42,7 +42,7 @@ const Services = ({
   serviceList = mockServiceList,
 }: ServicesProps) => {
   return (
-    <Section variant={SectionVariants.LARGE} outerClassName="bg-grey4">
+    <Section variant={SectionVariants.LARGE} outerClassName="bg-white">
       {mainHeading && (
         <h2 className="font-f2 mb-10 lg:mb-16 text-center">{mainHeading}</h2>
       )}
