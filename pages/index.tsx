@@ -7,7 +7,7 @@ import Services from "../components/Services";
 
 export default function Home() {
   return (
-    <Layout headerVariant={HeaderVariants.SECONDARY} isHomePage={true}>
+    <Layout headerVariant={HeaderVariants.SECONDARY}>
       <FullWidthCta
         heading="Ready for a painless website update?"
         subheading="You need a professional website that conveys your services and drives business, and we're ready to create that for you."
