@@ -22,15 +22,15 @@ const FullWidthCta = ({
   return (
     <Section
       variant={SectionVariants.LARGE}
-      outerClassName="bg-primary"
+      outerClassName="bg-white"
       innerClassName=" flex flex-col items-center text-white"
       style={
         hero
           ? {
-              backgroundImage: "url('/placeholder.png')",
+              backgroundImage: "url('/blue-background-curvy.png')",
               backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
+              backgroundSize: "100% 100%",
+              backgroundPosition: "top",
             }
           : {}
       }

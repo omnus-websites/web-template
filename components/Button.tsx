@@ -44,7 +44,7 @@ const Button: FC<ButtonProps> = ({
 
   const sharedButtonClasses = `flex w-fit items-center`;
   const buttonClass = classNames(
-    "p-4 font-base",
+    "p-4 font-base font-bold",
     {
       [`${sharedButtonClasses} bg-primary text-white`]: isPrimary,
       [`${sharedButtonClasses} bg-transparent text-primary border-2 border-primary`]:

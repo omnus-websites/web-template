@@ -5,8 +5,9 @@ import Button, { ButtonVariants } from "./Button";
 import logoPrimary from "../assets/Logo@2x.png";
 import logoSecondary from "../assets/Logo@2x-1.png";
 import Burger from "./Burger";
-import { useState } from "react";
+import { CSSProperties, useState } from "react";
 import MobileMenu from "./MobileMenu";
+import Home from "../pages";
 
 const navConfig = [
   {
@@ -26,6 +27,7 @@ const navConfig = [
 export enum HeaderVariants {
   PRIMARY = "primary",
   SECONDARY = "secondary",
+  COBALT = "cobalt",
 }
 
 type HeaderProps = {
@@ -35,8 +37,18 @@ type HeaderProps = {
 const Header = ({ variant }: HeaderProps) => {
   const [isOpen, setOpen] = useState(false);
   const isPrimary = variant === HeaderVariants.PRIMARY;
+  const isSecondary = variant === HeaderVariants.SECONDARY;
+
+  const homePageBackgroundImage = {
+    backgroundImage: "url('/blue-background-curvy.png')",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  };
+
   return (
     <header
+      style={isSecondary ? homePageBackgroundImage : {}}
       className={classNames(
         "flex justify-between items-center px-4 py-3 lg:px-10 lg:py-6",
         {

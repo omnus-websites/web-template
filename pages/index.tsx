@@ -3,20 +3,22 @@ import { ButtonVariants } from "../components/Button";
 import FullWidthCta from "../components/FullWidthCta";
 import { HeaderVariants } from "../components/Header";
 import Layout from "../components/Layout";
+import Services from "../components/Services";
 
 export default function Home() {
   return (
-    <Layout headerVariant={HeaderVariants.SECONDARY}>
+    <Layout headerVariant={HeaderVariants.SECONDARY} isHomePage={true}>
       <FullWidthCta
-        heading="Test heading"
-        subheading="Test subheading"
+        heading="Ready for a painless website update?"
+        subheading="You need a professional website that conveys your services and drives business, and we're ready to create that for you."
         cta={{
           href: "/",
-          text: "Call to action",
+          text: "Work with us",
           variant: ButtonVariants.WHITE,
         }}
         hero
       />
+      <Services />
     </Layout>
   );
 }
