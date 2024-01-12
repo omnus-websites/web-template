@@ -55,26 +55,22 @@ const logoBarList = [
   },
 ];
 
-const LogoBar = () => {
-  const innerSectionClassName = classNames("", {});
-
-  return (
-    <section className="bg-grey4 px-[130px] py-16">
-      <LogoBarGrid>
-        {logoBarList?.map((logo, index) => (
-          <div key={index}>
-            <Image
-              src={logo.src || "/placeholder.png"}
-              alt={logo.alt}
-              width={logo.width}
-              height={logo.height}
-              className=""
-            />
-          </div>
-        ))}
-      </LogoBarGrid>
-    </section>
-  );
-};
+const LogoBar = () => (
+  <section className="bg-grey4 px-[130px] py-16">
+    <LogoBarGrid>
+      {logoBarList?.map((logo, index) => (
+        <div key={index}>
+          <Image
+            src={logo.src || "/placeholder.png"}
+            alt={logo.alt}
+            width={logo.width}
+            height={logo.height}
+            className=""
+          />
+        </div>
+      ))}
+    </LogoBarGrid>
+  </section>
+);
 
 export default LogoBar;
