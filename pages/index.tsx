@@ -4,6 +4,7 @@ import FullWidthCta from "../components/FullWidthCta";
 import { HeaderVariants } from "../components/Header";
 import Layout from "../components/Layout";
 import Services from "../components/Services";
+import LogoBar from "../components/LogoBar";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         }}
         hero
       />
+      <LogoBar />
       <Services />
     </Layout>
   );
