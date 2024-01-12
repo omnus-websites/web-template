@@ -15,7 +15,7 @@ export type CTA = {
   variant: ButtonVariants;
 };
 
-type Image = {
+export type ImageType = {
   src: string | null;
   alt: string;
 };
@@ -23,7 +23,7 @@ type Image = {
 type TwoColumnProps = {
   content?: Content;
   cta?: CTA;
-  image?: Image;
+  image?: ImageType;
   imageLeft?: boolean;
   hero?: boolean;
 };
@@ -39,7 +39,7 @@ const defaultCta: CTA = {
   variant: ButtonVariants.PRIMARY,
 };
 
-const defaultImage: Image = {
+const defaultImage: ImageType = {
   src: null,
   alt: "default alt",
 };

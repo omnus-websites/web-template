@@ -1,9 +1,10 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
 // TODO: Update font
-import { Work_Sans } from '@next/font/google'
+import { Work_Sans, Space_Grotesk } from "@next/font/google";
 
-const work_sans = Work_Sans({ subsets: ['latin'] })
+const work_sans = Work_Sans({ subsets: ["latin"] });
+const space_grotesk = Space_Grotesk({ subsets: ["latin"] });
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -15,5 +16,5 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       `}</style>
       <Component {...pageProps} />
     </>
-  )
+  );
 }

@@ -31,5 +31,8 @@ module.exports = {
       f2: ["40px", "44px"],
       f1: ["56px", "62px"],
     },
+    boxShadow: {
+      "quote-card": "1px 1px 12px 0px rgba(0, 0, 0, 0.08);",
+    },
   },
 };

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { ButtonVariants } from "../components/Button";
 import FullWidthCta from "../components/FullWidthCta";
 import { HeaderVariants } from "../components/Header";
@@ -6,6 +5,36 @@ import Layout from "../components/Layout";
 import Services from "../components/Services";
 import LogoBar from "../components/LogoBar";
 import TwoColumn from "../components/TwoColumn";
+import Section, { SectionVariants } from "../components/Section";
+import Grid from "../components/Grid";
+import QuoteCard, { QuoteCardProps } from "../components/QuoteCard";
+
+const quoteCards: QuoteCardProps[] = [
+  {
+    image: { src: "/quote-card-face.png", alt: "someone's face" },
+    title: "Text highlight",
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam donec vitae scelerisque pellentesque. Et non laoreet enim faucibus. Placerat egestas in gravida vitae et. Dignissim hac feugiat fermentum risus fermentum, ac.",
+    name: "Alice Blake",
+  },
+  {
+    image: { src: "/quote-card-face.png", alt: "someone's face" },
+    title: "Text highlight",
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam donec vitae scelerisque pellentesque. Et non laoreet enim faucibus. Placerat egestas in gravida vitae et.",
+    name: "Alice Blake",
+  },
+  {
+    image: { src: "/quote-card-face.png", alt: "someone's face" },
+    title: "Text highlight",
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam donec vitae scelerisque pellentesque faucibus. Placerat egestas in gravida vitae et. Dignissim hac feugiat fermentum risus fermentum, ac.",
+    name: "Alice Blake",
+  },
+  {
+    image: { src: "/quote-card-face.png", alt: "someone's face" },
+    title: "Text highlight",
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam donec vitae scelerisque pellentesque. Et non laoreet enim faucibus. Placerat egestas in gravida vitae et. Dignissim hac feugiat fermentum risus fermentum, ac.",
+    name: "Alice Blake",
+  },
+];
 
 export default function Home() {
   return (
@@ -31,7 +60,15 @@ export default function Home() {
           text: "Learn more about us",
           variant: ButtonVariants.PRIMARY,
         }}
+        image={{ src: "/first-two-column.png", alt: "whatever" }}
       />
+      <Section variant={SectionVariants.LARGE}>
+        <Grid gapX="gap-x-6">
+          {quoteCards.map((quoteCard, i) => (
+            <QuoteCard key={i} {...quoteCard} />
+          ))}
+        </Grid>
+      </Section>
       <Services />
     </Layout>
   );
