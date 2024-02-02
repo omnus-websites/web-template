@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { ReactNode } from "react";
 import React from "react";
 
-type LogoBarGridProps = {
+export type LogoBarGridProps = {
   tabletCols?: number;
   desktopCols?: number;
   children: ReactNode[];

@@ -19,7 +19,9 @@ const QuoteCard = ({ image, title, body, name }: QuoteCardProps) => (
       </div>
     )}
     <h3 className="font-base font-bold text-primary mb-2">{title}</h3>
-    <p className="font-sm text-grey2 mb-4">{body}</p>
+    <div className="flex-grow">
+      <p className="font-sm text-grey2 mb-4">{body}</p>
+    </div>
     <p className="font-sm text-grey1 font-bold">{name}</p>
   </div>
 );

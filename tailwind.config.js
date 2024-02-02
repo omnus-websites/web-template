@@ -12,6 +12,7 @@ module.exports = {
       tertiary: "#",
       pale_primary: "",
       cobalt: "#2762EC",
+      green: "#52B39D",
       black: "#000000",
       white: "#FFFFFF",
       grey1: "#555555",

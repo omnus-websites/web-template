@@ -8,6 +8,7 @@ import TwoColumn from "../components/TwoColumn";
 import Section, { SectionVariants } from "../components/Section";
 import Grid from "../components/Grid";
 import QuoteCard, { QuoteCardProps } from "../components/QuoteCard";
+import CaseStudyHighlight from "../components/CaseStudyHighlight";
 
 const quoteCards: QuoteCardProps[] = [
   {
@@ -69,7 +70,10 @@ export default function Home() {
           ))}
         </Grid>
       </Section>
-      <Services />
+      <CaseStudyHighlight
+        title="Capital View Accounting"
+        image={{ src: "/hero-graphic-1.png", alt: "expanded website" }}
+      />
     </Layout>
   );
 }
